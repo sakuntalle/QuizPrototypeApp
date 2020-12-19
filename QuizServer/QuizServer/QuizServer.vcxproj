@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CF7E201A-C455-46D7-8C7E-13947CEA393F}</ProjectGuid>
+    <RootNamespace>QuizServer</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions);_SCL_SECURE_NO_WARNINGS </PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>.\;..\..\CommLayer\include;..\..\External\boost_1_60_0;..\..\External\Sqlite\include;..\..\DatabaseLayer\include</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4005</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\External\boost_1_60_0\stage\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>..\..\External\Sqlite\sqlite3.lib;%(AdditionalDependencies);</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>.\;..\..\CommLayer\include;..\..\External\boost_1_60_0;..\..\External\Sqlite\include;..\..\DatabaseLayer\include</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4005</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\External\boost_1_60_0\stage\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies);..\..\External\Sqlite\sqlite3.lib</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\CommLayer\include\CommBase.h" />
+    <ClInclude Include="..\..\CommLayer\include\CommHandler.h" />
+    <ClInclude Include="..\..\CommLayer\include\CommHandlerHelpers.h" />
+    <ClInclude Include="..\..\CommLayer\include\CommMessageBase.h" />
+    <ClInclude Include="..\..\CommLayer\include\CommMessageFactory.h" />
+    <ClInclude Include="..\..\CommLayer\include\CommObserver.h" />
+    <ClInclude Include="..\..\CommLayer\include\CommonIncludes.h" />
+    <ClInclude Include="..\..\CommLayer\include\CommServer.h" />
+    <ClInclude Include="..\..\CommLayer\include\CommSession.h" />
+    <ClInclude Include="..\..\CommLayer\include\LoginMessage.h" />
+    <ClInclude Include="..\..\CommLayer\include\SendQuestionMessage.h" />
+    <ClInclude Include="..\..\CommLayer\include\StartInitMessage.h" />
+    <ClInclude Include="..\..\DatabaseLayer\include\DBManagerBase.h" />
+    <ClInclude Include="..\..\DatabaseLayer\include\SQLiteDBManager.h" />
+    <ClInclude Include="..\..\External\Sqlite\Include\CppSQLite3.h" />
+    <ClInclude Include="GamesManager.h" />
+    <ClInclude Include="QuizServer.h" />
+    <ClInclude Include="QuizServerDlg.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\CommLayer\source\CommBase.cpp" />
+    <ClCompile Include="..\..\CommLayer\source\CommHandler.cpp" />
+    <ClCompile Include="..\..\CommLayer\source\CommMessageBase.cpp" />
+    <ClCompile Include="..\..\CommLayer\source\CommMessageFactory.cpp" />
+    <ClCompile Include="..\..\CommLayer\source\CommObserver.cpp" />
+    <ClCompile Include="..\..\CommLayer\source\CommServer.cpp" />
+    <ClCompile Include="..\..\CommLayer\source\CommSession.cpp" />
+    <ClCompile Include="..\..\CommLayer\source\LoginMessage.cpp" />
+    <ClCompile Include="..\..\CommLayer\source\SendQuestionMessage.cpp" />
+    <ClCompile Include="..\..\CommLayer\source\StartInitMessage.cpp" />
+    <ClCompile Include="..\..\DatabaseLayer\DBManagerBase.cpp" />
+    <ClCompile Include="..\..\DatabaseLayer\SQLiteDBManager.cpp" />
+    <ClCompile Include="..\..\External\Sqlite\source\CppSQLite3.cpp" />
+    <ClCompile Include="GamesManager.cpp" />
+    <ClCompile Include="QuizServer.cpp" />
+    <ClCompile Include="QuizServerDlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="QuizServer.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\QuizServer.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\QuizServer.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="QuizServer.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

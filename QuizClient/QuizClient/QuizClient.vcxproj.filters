@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="CommLayer">
+      <UniqueIdentifier>{231fab8a-2894-445e-88b0-3a7b711919cd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="QuizClient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QuizClientDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CommLayer\include\CommMessageFactory.h">
+      <Filter>CommLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CommLayer\include\CommClient.h">
+      <Filter>CommLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CommLayer\include\CommMessageBase.h">
+      <Filter>CommLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CommLayer\source\LoginMessage.h">
+      <Filter>CommLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CommLayer\include\CommHandler.h">
+      <Filter>CommLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CommLayer\include\CommObserver.h">
+      <Filter>CommLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CommLayer\include\StartInitMessage.h">
+      <Filter>CommLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CommLayer\include\CommBase.h">
+      <Filter>CommLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CommLayer\include\SendQuestionMessage.h">
+      <Filter>CommLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CommLayer\include\CommonIncludes.h">
+      <Filter>CommLayer</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="QuizClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QuizClientDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CommLayer\source\CommMessageFactory.cpp">
+      <Filter>CommLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CommLayer\source\CommClient.cpp">
+      <Filter>CommLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CommLayer\source\CommMessageBase.cpp">
+      <Filter>CommLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CommLayer\source\LoginMessage.cpp">
+      <Filter>CommLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CommLayer\source\CommHandler.cpp">
+      <Filter>CommLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CommLayer\source\CommObserver.cpp">
+      <Filter>CommLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CommLayer\source\StartInitMessage.cpp">
+      <Filter>CommLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CommLayer\source\CommBase.cpp">
+      <Filter>CommLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CommLayer\source\SendQuestionMessage.cpp">
+      <Filter>CommLayer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="QuizClient.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\QuizClient.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\QuizClient.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
